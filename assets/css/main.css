@@ -1,4 +1,10 @@
 @import url(fontawesome-all.min.css);
+:root {
+  --clr-dark:    #1a1f36;
+  --clr-accent:  #00aaff;
+  --clr-neutral: #f4f5f7;
+  --clr-text:    #333;
+}
 
 /*
 	Hyperspace by HTML5 UP
@@ -98,7 +104,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: var(--clr-neutral);
+		color:      var(--clr-text);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -111,6 +118,13 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+        header,
+	footer {
+		background: var(--clr-dark);
+	}
+	a.button.primary {
+		background: var(--clr-accent);
+	}
 
 /* Type */
 
