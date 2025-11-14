@@ -10,8 +10,8 @@
 
 html, body {
   font-family: system-ui, Inter, sans-serif;
-  background: #ffffff;
-  color: #111111;
+  background: #111827; /* charcoal dark */
+  color: #f3f4f6;
   scroll-behavior: smooth;
 }
 
@@ -29,8 +29,9 @@ a {
   text-decoration: none;
 }
 
+
 /* ---------------------------------------------- */
-/* GLOBAL LAYOUT */
+/* GLOBAL LAYOUT & TYPOGRAPHY */
 /* ---------------------------------------------- */
 
 .section {
@@ -40,15 +41,24 @@ a {
 }
 
 .section.alt {
-  background: #f5f7fa;
+  background: #1e293b; /* slightly lighter charcoal */
 }
 
 .section h2 {
   text-align: center;
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 40px;
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  letter-spacing: -0.5px;
+  color: #f9fafb;
 }
+
+p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #e5e7eb;
+}
+
 
 /* ---------------------------------------------- */
 /* GRID SYSTEM */
@@ -56,21 +66,22 @@ a {
 
 .grid-2 {
   display: grid;
-  gap: 20px;
+  gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .grid-3 {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .stack {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
+
 
 /* ---------------------------------------------- */
 /* HERO */
@@ -78,7 +89,7 @@ a {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffffff, #e8edf7);
+  background: linear-gradient(135deg, #111827, #1e293b);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,30 +103,34 @@ a {
 
 .hero h1 {
   font-size: 70px;
-  font-weight: 800;
-  margin-bottom: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: #ffffff;
+  letter-spacing: -1px;
 }
 
 .hero-sub {
   font-size: 26px;
-  opacity: 0.7;
+  opacity: 0.8;
+  color: #cbd5e1;
 }
 
 .hero-desc {
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 35px;
   font-size: 20px;
-  max-width: 550px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.8;
+  color: #d1d5db;
+  opacity: 0.85;
 }
 
-/* SCROLL PROMPT */
 .hero-scroll {
   margin-top: 40px;
   font-size: 18px;
   opacity: 0.6;
+  color: #93c5fd;
   animation: bounce 1.6s infinite;
 }
 
@@ -125,6 +140,7 @@ a {
   100% { transform: translateY(0); }
 }
 
+
 /* ---------------------------------------------- */
 /* BUTTONS */
 /* ---------------------------------------------- */
@@ -132,7 +148,7 @@ a {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 17px;
   font-weight: 600;
   cursor: pointer;
@@ -140,22 +156,21 @@ a {
 }
 
 .btn.primary {
-  background: #0057ff;
+  background: #3b82f6;
   color: white;
 }
 
 .btn.primary:hover {
-  background: #0041c9;
+  background: #2563eb;
 }
 
 .btn.outline {
-  border: 2px solid #0057ff;
-  color: #0057ff;
-  background: white;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
 }
 
 .btn.outline:hover {
-  background: #0057ff;
+  background: #3b82f6;
   color: white;
 }
 
@@ -164,34 +179,29 @@ a {
   text-align: center;
 }
 
-/* HERO BUTTONS */
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
 
 /* ---------------------------------------------- */
 /* CARD */
 /* ---------------------------------------------- */
 
 .card {
-  background: white;
-  border: 1px solid #d7ddea;
-  border-radius: 12px;
-  padding: 28px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  background: #1f2937; 
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .card.large {
-  padding: 38px;
+  padding: 40px;
 }
 
 .card.inner {
-  padding: 20px;
-  border-radius: 10px;
+  padding: 22px;
+  border-radius: 12px;
+  background: #111827;
 }
+
 
 /* ---------------------------------------------- */
 /* TAGS */
@@ -200,18 +210,19 @@ a {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .tags span {
-  background: #edf2ff;
-  color: #0037b3;
+  background: #1e3a8a;
+  color: #bfdbfe;
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
 }
+
 
 /* ---------------------------------------------- */
 /* EXPERIENCE */
@@ -219,25 +230,34 @@ a {
 
 .sub {
   font-size: 16px;
-  opacity: 0.7;
-  margin-bottom: 12px;
+  opacity: 0.75;
+  color: #cbd5e1;
+  margin-bottom: 14px;
 }
+
+ul li {
+  color: #e2e8f0;
+}
+
 
 /* ---------------------------------------------- */
 /* PROJECT CARDS */
 /* ---------------------------------------------- */
 
 .project h3 {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
+  color: #f3f4f6;
 }
 
 .project .period {
   font-size: 14px;
-  opacity: 0.6;
-  margin-bottom: 10px;
+  opacity: 0.7;
+  margin-bottom: 12px;
+  color: #cbd5e1;
 }
+
 
 /* ---------------------------------------------- */
 /* CONTACT */
@@ -245,16 +265,18 @@ a {
 
 #contact .label {
   font-size: 14px;
-  opacity: 0.6;
+  opacity: 0.7;
+  color: #9ca3af;
 }
 
 .contact-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   justify-content: center;
   margin-top: 30px;
 }
+
 
 /* ---------------------------------------------- */
 /* FOOTER */
@@ -264,8 +286,10 @@ a {
   margin-top: 40px;
   text-align: center;
   font-size: 15px;
-  opacity: 0.6;
+  opacity: 0.65;
+  color: #cbd5e1;
 }
+
 
 /* ---------------------------------------------- */
 /* RESPONSIVE */
@@ -273,15 +297,46 @@ a {
 
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 46px;
+    font-size: 50px;
   }
   .hero-sub {
     font-size: 20px;
   }
   .hero-desc {
-    font-size: 17px;
+    font-size: 18px;
   }
   .section h2 {
-    font-size: 34px;
+    font-size: 36px;
   }
 }
+/* ---------------------------------------------- */
+/* SCROLL FADE-IN ANIMATION FOR SECTIONS */
+/* ---------------------------------------------- */
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: sectionFade 0.9s ease-out forwards;
+}
+
+/* Stagger each section slightly for a smooth cascade */
+.section:nth-of-type(1) { animation-delay: 0.1s; }
+.section:nth-of-type(2) { animation-delay: 0.3s; }
+.section:nth-of-type(3) { animation-delay: 0.5s; }
+.section:nth-of-type(4) { animation-delay: 0.7s; }
+.section:nth-of-type(5) { animation-delay: 0.9s; }
+.section:nth-of-type(6) { animation-delay: 1.1s; }
+.section:nth-of-type(7) { animation-delay: 1.3s; }
+
+/* The fade + slide-up motion */
+@keyframes sectionFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
