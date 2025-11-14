@@ -1,0 +1,287 @@
+/* ---------------------------------------------- */
+/* RESET + BASE */
+/* ---------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: system-ui, Inter, sans-serif;
+  background: #ffffff;
+  color: #111111;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------- */
+/* GLOBAL LAYOUT */
+/* ---------------------------------------------- */
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section.alt {
+  background: #f5f7fa;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* ---------------------------------------------- */
+/* GRID SYSTEM */
+/* ---------------------------------------------- */
+
+.grid-2 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid-3 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------------------------------------------- */
+/* HERO */
+/* ---------------------------------------------- */
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #e8edf7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 26px;
+  opacity: 0.7;
+}
+
+.hero-desc {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  font-size: 20px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8;
+}
+
+/* SCROLL PROMPT */
+.hero-scroll {
+  margin-top: 40px;
+  font-size: 18px;
+  opacity: 0.6;
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------------------------------------------- */
+/* BUTTONS */
+/* ---------------------------------------------- */
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn.primary {
+  background: #0057ff;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #0041c9;
+}
+
+.btn.outline {
+  border: 2px solid #0057ff;
+  color: #0057ff;
+  background: white;
+}
+
+.btn.outline:hover {
+  background: #0057ff;
+  color: white;
+}
+
+.btn.full {
+  width: 100%;
+  text-align: center;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* ---------------------------------------------- */
+/* CARD */
+/* ---------------------------------------------- */
+
+.card {
+  background: white;
+  border: 1px solid #d7ddea;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.card.large {
+  padding: 38px;
+}
+
+.card.inner {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ---------------------------------------------- */
+/* TAGS */
+/* ---------------------------------------------- */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tags span {
+  background: #edf2ff;
+  color: #0037b3;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ---------------------------------------------- */
+/* EXPERIENCE */
+/* ---------------------------------------------- */
+
+.sub {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+/* ---------------------------------------------- */
+/* PROJECT CARDS */
+/* ---------------------------------------------- */
+
+.project h3 {
+  margin-bottom: 4px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.project .period {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+/* ---------------------------------------------- */
+/* CONTACT */
+/* ---------------------------------------------- */
+
+#contact .label {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* ---------------------------------------------- */
+/* FOOTER */
+/* ---------------------------------------------- */
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+/* ---------------------------------------------- */
+/* RESPONSIVE */
+/* ---------------------------------------------- */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 46px;
+  }
+  .hero-sub {
+    font-size: 20px;
+  }
+  .hero-desc {
+    font-size: 17px;
+  }
+  .section h2 {
+    font-size: 34px;
+  }
+}
